@@ -50,14 +50,13 @@ app.get("/playlist/tracks", async (req, res) => {
       });
   
       const tracks = response.data.tracks.items.map((item) => ({
-        
         name: item.track.name,
         artist: item.track.artists.map((artist) => artist.name).join(", "),
         album: item.track.album.name,
         popularity: item.track.popularity,
         duration_ms: item.track.duration_ms,
         spotify_url: item.track.external_urls.spotify,
-        features: item.track.external_urls.spotify.split("/").pop(),
+        track_id:"pussy",
         cover_images: item.track.album.images[1],
       }));
   
