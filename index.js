@@ -57,7 +57,7 @@ app.get("/playlist/tracks", async (req, res) => {
         popularity: item.track.popularity,
         duration_ms: item.track.duration_ms,
         spotify_url: item.track.external_urls.spotify,
-        track_id: item.track.external_urls.spotify.split("/").pop(),
+        features: item.track.external_urls.spotify.split("/").pop(),
         cover_images: item.track.album.images[1],
       }));
   
